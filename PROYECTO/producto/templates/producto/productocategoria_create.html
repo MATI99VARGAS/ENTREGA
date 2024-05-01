@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}
+<div>
+    <h1 class="pb-lg-3 text-white text-bg-secondary px-3 py-2 rounded text-center h3">
+        CATEGORÍA DE PRODUCTOS: CREACIÓN 
+    </h1>
+
+</div>
+
+
+{% endblock titulo %}
+
+{% block contenido %}
+
+    <form action="" method="post">
+        {% csrf_token %}    
+
+        <table>
+            {{form.as_p}}
+        </table>
+        <button type="submit"> Guardar</button>
+    </form>
+
+{% endblock contenido %}

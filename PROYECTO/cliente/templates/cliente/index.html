@@ -1,0 +1,39 @@
+    {% extends 'core/base.html' %}
+    {% block  titulo%}
+    <div class="row align-items-center my-5 ">
+        <h1 class="pb-lg-3 text-white text-bg-secondary px-3 py-2 rounded">
+               Clientes 
+        </h1>
+
+    </div>
+    {% endblock titulo %}
+
+    {% block contenido %}
+        
+    <div class="row">
+        {% for x in clientes %}
+          <div class="col-md-3 pb-4">
+            <div class="card mb-3">
+              <div class="card-body align-self-md-center my-1 ">
+                <h5 class="card-title text-nowrap">{{ x.nombre }} {{ x.apellido }}</h5>
+                <p class="card-text">
+                  <span class="fw-bold">Nacimiento:</span> {{ x.nacimiento|date:"d/m/Y" }} <br>
+                  <span class="fw-bold">País de origen:</span> {{ x.pais_origen_id }}
+                </p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+      
+    <div class="fs-3 pb-4 ">
+      <a href="{% url 'cliente:cliente_create' %}">Crear clientes</a>
+    </div>
+
+    <a href="{% url 'core:Home' %}"><div class="row align-items-center my-5 ">
+        <h1 class="pb-lg-3 font-size-xs text-black text-bg-secondary px-3 py-2 rounded">
+          Volver a Inicio</h1>
+      </a>
+        
+
+    {% endblock contenido%}
