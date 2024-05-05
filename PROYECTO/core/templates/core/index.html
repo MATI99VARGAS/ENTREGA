@@ -3,132 +3,96 @@
 {% block titulo %}
 {% endblock titulo %}
 {% block contenido %}
-    <!-- Masthead-->
-    <header class="masthead">
-        <div class="container px-4 px-lg-5 h-100">
-            <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                <div class="col-lg-8 align-self-end">
-                    <h1 class="text-white font-weight-bold">El futuro de la tecnología, hoy en tu empresa</h1>
-                    <hr class="divider" />
-                </div>
-                <div class="col-lg-8 align-self-baseline">
-                    <p class="text-white-75 mb-5">
-                        Soluciones tecnológicas inteligentes para tu empresa. Impulsamos tu negocio con innovación y eficiencia.
-                    </p>
-                    <a class="btn btn-primary btn-xl"
-                       href="https://wa.me/541133051014"
-                       target="_blank">WhatsApp</a>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container px-4 px-lg-5">
+        <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                <li class="nav-item"><a class="nav-link" href="{% url 'producto:Home' %}">PRODUCTOS</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'cliente:Home' %}">CLIENTES</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">CONTACTOS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#ABOUT">ABOUT</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'core/imagenes/intro.webp' %}" alt="..." />
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper">Café que enamora</span>
+                    <P></P>
+                    <span class="section-heading-lower">Un momento para disfrutar</span>
+                </h2>
+                <p class="mb-3">Cada taza de nuestro café artesanal de calidad comienza con ingredientes finamente seleccionados. Una vez que lo pruebes, nuestro café será una maravillosa adición a tu rutina diaria. ¡Te lo garantizamos!
+
+                </p>
+                <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="#!">Visit Us Today!</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="cta-inner bg-faded text-center rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-upper">Nuestra Promesa</span>
+                        <P></P>
+                        <span class="section-heading-lower">para vos</span>
+                    </h2>
+                    <p class="mb-0">Cuando ingresas a nuestro establecimiento para comenzar el día, estamos dedicados a brindarte un servicio amable, un ambiente cálido y, sobre todo, excelentes productos elaborados con ingredientes de la más alta calidad. Si no está satisfecho, háganoslo saber y haremos todo lo posible para arreglar las cosas.</p>
                 </div>
             </div>
         </div>
-    </header>
-    <!-- About-->
-    <section class="page-section bg-primary" id="about">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="text-white mt-0">We've got what you need!</h2>
-                    <hr class="divider divider-light" />
-                    <p class="text-white-75 mb-4">
-                        Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!
-                    </p>
-                    <a class="btn btn-light btn-xl" href="#services">Get Started!</a>
+    </div>
+</section>
+
+<section class="page-section bg-primary" id="ABOUT">
+    <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="{% static 'core/imagenes/about.webp'%}" alt="..." />
+    <div class="container">
+        <div class="about-heading-content">
+            <div class="row">
+                <div class="col-xl-9 col-lg-10 mx-auto">
+                    <div class="bg-faded rounded p-5">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-upper">Café fuerte, mente fuerte</span>
+                            <P></P>
+                            <span class="section-heading-lower">ACERCA DE NUESTRO  CAFÉ</span>
+                        </h2>
+                        <p>Fundado en 1987, nuestro establecimiento ha estado sirviendo un rico café procedente de agricultores artesanales provenientes de varias regiones de América del Sur y Central. Nos dedicamos a viajar por el mundo, encontrar el mejor café y traerlo aquí en nuestra cafetería.</p>
+                        <p class="mb-0">
+                            Te garantizamos que caeras 
+                            <em>encantado</em>
+                            con nuestras deliciosas mezclas desde el momento en que entras hasta que terminas tu último sorbo.
+                            Nos encantará formar parte de rutina, cuando sales con amigos o simplemente para disfrutar de un tiempo a solas.
+
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Contact-->
-    <section class="page-section" id="contact">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-lg-8 col-xl-6 text-center">
-                    <h2 class="mt-0">Let's Get In Touch!</h2>
-                    <hr class="divider" />
-                    <p class="text-muted mb-5">
-                        Ready to start your next project with us? Send us a messages and we will get back to you as soon as possible!
-                    </p>
-                </div>
-            </div>
-            <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-                <div class="col-lg-6">
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- * * SB Forms Contact Form * *-->
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- This form is pre-integrated with SB Forms.-->
-                    <!-- To make this form functional, sign up at-->
-                    <!-- https://startbootstrap.com/solution/contact-forms-->
-                    <!-- to get an API token!-->
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                        <!-- Name input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control"
-                                   id="name"
-                                   type="text"
-                                   placeholder="Enter your name..."
-                                   data-sb-validations="required" />
-                            <label for="name">Full name</label>
-                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                        </div>
-                        <!-- Email address input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control"
-                                   id="email"
-                                   type="email"
-                                   placeholder="name@example.com"
-                                   data-sb-validations="required,email" />
-                            <label for="email">Email address</label>
-                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                        </div>
-                        <!-- Phone number input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control"
-                                   id="phone"
-                                   type="tel"
-                                   placeholder="(123) 456-7890"
-                                   data-sb-validations="required" />
-                            <label for="phone">Phone number</label>
-                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                        </div>
-                        <!-- Message input-->
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control"
-                                      id="message"
-                                      type="text"
-                                      placeholder="Enter your message here..."
-                                      style="height: 10rem"
-                                      data-sb-validations="required"></textarea>
-                            <label for="message">Message</label>
-                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                        </div>
-                        <!-- Submit success message-->
-                        <!---->
-                        <!-- This is what your users will see when the form-->
-                        <!-- has successfully submitted-->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3">
-                                <div class="fw-bolder">Form submission successful!</div>
-                                To activate this form, sign up at
-                                <br />
-                                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                            </div>
-                        </div>
-                        <!-- Submit error message-->
-                        <!---->
-                        <!-- This is what your users will see when there is-->
-                        <!-- an error submitting the form-->
-                        <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3">Error sending message!</div>
-                        </div>
-                        <!-- Submit Button-->
-                        <div class="d-grid">
-                            <button class="btn btn-primary btn-xl disabled"
-                                    id="submitButton"
-                                    type="submit">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
+
+
+<footer class="footer text-faded text-center py-5">
+    <div class="container"><p class="m-0 small">La Esquina del Sabor &copy; 2024</p></div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="{% static 'core/js/scripts.js' %}></script>
+
+
+
 {% endblock contenido %}

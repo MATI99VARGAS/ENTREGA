@@ -1,39 +1,63 @@
-    {% extends 'core/base.html' %}
+{% extends 'core/base.html' %}
     {% block  titulo%}
-    <div class="row align-items-center my-5 ">
-        <h1 class="pb-lg-3 text-white text-bg-secondary px-3 py-2 rounded">
-               Clientes 
-        </h1>
-
-    </div>
+    <section class="page-section">
+      <div class="container">
+          <div class="product-item">
+              <div class="product-item-title d-flex">
+                  <div class="bg-faded p-5 d-flex me-auto rounded">
+                      <h2 class="section-heading mb-0">
+                          <p></p>
+                          <span class="section-heading-lower">CLIENTES</span>
+                      </h2>
+                    </div>
+              </div>
+          </div>
+        </div>
+    </section> 
     {% endblock titulo %}
 
     {% block contenido %}
         
     <div class="row">
         {% for x in clientes %}
-          <div class="col-md-3 pb-4">
-            <div class="card mb-3">
-              <div class="card-body align-self-md-center my-1 ">
-                <h5 class="card-title text-nowrap">{{ x.nombre }} {{ x.apellido }}</h5>
-                <p class="card-text">
-                  <span class="fw-bold">Nacimiento:</span> {{ x.nacimiento|date:"d/m/Y" }} <br>
-                  <span class="fw-bold">País de origen:</span> {{ x.pais_origen_id }}
-                </p>
-              </div>
+        <div class="col-md-3 pb-4">
+          <div class="card mb-3" style="background-color: burlywood; color: black;">  <div class="card-body align-self-md-center my-1 ">
+              <h5 class="card-title text-nowrap">{{ x.nombre }} {{x.apellido}}</h5>
+              <p class="card-text">
+                <span class="fw-bold">Nacimiento: </span> {{ x.nacimiento }} <br>
+                <span class="fw-bold">Nacionalidad: </span> {{ x.pais_origen_id }} <br>
+                <span class="fw-bold">Nivel: </span> {{ nivel_sus }} <br>
+              </p>
             </div>
           </div>
+        </div>
         {% endfor %}
     </div>
       
     <div class="fs-3 pb-4 ">
-      <a href="{% url 'cliente:cliente_create' %}">Crear clientes</a>
-    </div>
+      <a href="{% url 'producto:productocategoria_create' %}">
+        <h1 class="site-heading text-center text-faded d-none d-lg-block">
+        <span class="site-heading-upper text-primary mb-3">CREAR CLIENTES</span></a>
+    </div> 
 
-    <a href="{% url 'core:Home' %}"><div class="row align-items-center my-5 ">
-        <h1 class="pb-lg-3 font-size-xs text-black text-bg-secondary px-3 py-2 rounded">
-          Volver a Inicio</h1>
-      </a>
+    <a href="{% url 'core:Home' %}">
+     
+      <section class="page-section bg-primary" id="about">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="text-white mt-0">VOLVER AL INCIO</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    </a>
         
-
+      <footer class="footer text-faded text-center py-5">
+        <div class="container"><p class="m-0 small">La Esquina del Sabor &copy; 2024</p></div>
+    </footer>
     {% endblock contenido%}
+
+
