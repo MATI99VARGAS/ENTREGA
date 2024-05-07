@@ -6,5 +6,11 @@ class ProductoCategoriaForm(forms.ModelForm):
         model = models.ProductoCategoria
         fields = "__all__"
 
+class Producto_CreateForm(forms.ModelForm):
+    class Meta:
+        model = models.Producto
+        fields = "__all__"
+
+
 
 

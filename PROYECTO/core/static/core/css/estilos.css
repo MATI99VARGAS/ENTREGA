@@ -1,0 +1,80 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-register{
+    width: auto;
+    background: #2c1500;
+    padding: 30px;
+    margin: auto;
+    margin-top: 150px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: rgb(255, 255, 255);
+    box-shadow: 7px 13px 37px #8a4601 ;
+}
+
+.form-register h4{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.controls {
+    width: 100%;
+    background: #bb8548;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #0e0802;
+    font-family: 'calibri';
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.form-register p {
+    height: 40 px;
+    text-align: left;
+    font-size: 30px;
+}
+
+.form-register a:hover {
+    color: white;
+    text-decoration: underline;
+
+
+}
+
+.from-register .bottons{
+    width: 100%;
+    background: rgb(160, 92, 4);
+    border: none;
+    padding: 14px;
+    color: rgb(255, 253, 251);
+    margin: 16px 0;
+    font-size: 40px;
+}
+
+.form-group {
+    /* Styles for each form group (label and input) */
+    width: 100%;
+    background: rgb(160, 92, 4);
+    border: none;
+    padding: 14px;
+    color: rgb(255, 253, 251);
+    margin: 16px 0;
+    font-size: 40px;
+}
+  
+.form-label {
+    /* Styles for labels */
+    width: 100%;
+    background: rgb(160, 92, 4);
+    border: none;
+    padding: 14px;
+    color: rgb(255, 253, 251);
+    margin: 16px 0;
+    font-size: 40px;
+}
+

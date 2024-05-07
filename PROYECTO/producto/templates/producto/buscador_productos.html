@@ -1,0 +1,87 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}">
+</head>
+
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex me-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <p></p>
+                        <span class="section-heading-lower">PRODUCTOS</span>
+                    </h2>
+                  </div>
+            </div>
+        </div>
+      </div>
+  </section>  
+
+  <div class="col-md-3 pb-4">
+    <div class="card mb-4" style="background-color: burlywood; color: black;">  
+        <div class="card-body align-self-md-center my-1 ">
+                <form action="{% url 'producto:buscador_productos' %}" method="get">
+                <input type="text" name="consulta" placeholder="Buscar...">
+                </form>
+           
+        </div>
+    </div>
+  </div>
+
+    <div class="row">
+        {% for x in productos %}
+        <div class="col-md-3 pb-4">
+          <div class="card mb-3" style="background-color: burlywood; color: black;">  <div class="card-body align-self-md-center my-1 ">
+              <h5 class="card-title text-nowrap">{{ x.nombre }}</h5>
+              <p class="card-text">
+                <span class="fw-bold">Descripción: </span> {{ x.descripcion }} <br>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock contenido %}
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex me-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <p></p>
+                        <span class="section-heading-lower">PRODUCTOS</span>
+                    </h2>
+                  </div>
+            </div>
+        </div>
+      </div>
+  </section>  
+
+  <div class="col-md-3 pb-4">
+    <div class="card mb-4" style="background-color: burlywood; color: black;">  
+        <div class="card-body align-self-md-center my-1 ">
+                <form action="{% url 'producto:Home' %}" method="get">
+                <input type="text" name="consulta" placeholder="Buscar...">
+                </form>
+           
+        </div>
+    </div>
+  </div>
+
+    <div class="row">
+        {% for x in productos %}
+        <div class="col-md-3 pb-4">
+          <div class="card mb-3" style="background-color: burlywood; color: black;">  <div class="card-body align-self-md-center my-1 ">
+              <h5 class="card-title text-nowrap">{{ x.nombre }}</h5>
+              <p class="card-text">
+                <span class="fw-bold">Descripción: </span> {{ x.descripcion }} <br>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+    </div>

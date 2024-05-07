@@ -1,25 +1,34 @@
 {% extends 'core/base.html' %}
-
-{% block titulo %}
-<div>
-    <h1 class="pb-lg-3 text-white text-bg-secondary px-3 py-2 rounded text-center h3">
-        CATEGORÍA DE PRODUCTOS: CREACIÓN 
-    </h1>
-
-</div>
-
-
-{% endblock titulo %}
+{% load static %}
 
 {% block contenido %}
 
-    <form action="" method="post">
-        {% csrf_token %}    
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}">
+        <title>Formulario de creación de categoria de productos</title>
+        <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}">
+    </head>
 
-        <table>
-            {{form.as_p}}
-        </table>
-        <button type="submit"> Guardar</button>
-    </form>
+    <body>
+        <section class="form-register">
+            <h4>FORMULARIO DE REGISTRO DE CATEGORÍAS DE PRODUCTOS</h4>
+            <form action="" method="post">
+              {% csrf_token %}
+          
+              <p>Nombre: <input class="controls" type="text" name="nombre" id="nombre" required></p>
+              <p>Descripción: <input class="controls" type="text" name="descripcion" id="descripcion" required></p>
+              
+        
+              <input class="bottons" type="submit" value="REGISTRAR">
+            </form>
+        </section>
+
+        <footer class="footer text-faded text-center py-5">
+            <div class="container"><p class="m-0 small">La Esquina del Sabor &copy; 2024</p></div>
+        </footer>
 
 {% endblock contenido %}

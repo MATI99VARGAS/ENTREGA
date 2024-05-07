@@ -18,7 +18,6 @@ class Precio(models.Model):
 
 class Producto(models.Model):
     nombre = models.CharField(max_length=200)
-    modelo = models.CharField(max_length=200,unique=True)
     modelo_categoria = models.ForeignKey(ProductoCategoria, on_delete=models.SET_NULL, null=True, verbose_name="categoría de productos")
     precio_producto = models.ForeignKey(Precio, on_delete=models.SET_NULL, null=True, verbose_name="Precio")
     

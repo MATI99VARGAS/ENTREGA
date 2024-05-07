@@ -17,16 +17,17 @@ class Pais(models.Model):
         verbose_name_plural = 'Países'
 
 class cliente(models.Model):
-    nombre = models.CharField(max_length=200)
+        nombre = models.CharField(max_length=200)
 
-    apellido = models.CharField(max_length=50)
+        apellido = models.CharField(max_length=50)
 
-    nacimiento = models.DateField(null=True)
+        nacimiento = models.DateField(null=True)
 
-    pais_origen_id = models.ForeignKey(Pais, on_delete=models.SET_NULL, null=True, verbose_name="País de origen")
+        pais_origen_id = models.ForeignKey(Pais, on_delete=models.SET_NULL, null=True, verbose_name="País de origen")
 
-    nivel_sus = models.ForeignKey(suscripcion, on_delete=models.SET_NULL, null=True, verbose_name="Nivel")
+        nivel_sus = models.ForeignKey(suscripcion, on_delete=models.SET_NULL, null=True, verbose_name="Nivel")
 
-    def __str__(self):
+        def __str__(self):
+             return self.nombre
 
-        return self.nombre
+            
