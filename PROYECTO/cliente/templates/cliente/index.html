@@ -1,14 +1,16 @@
 {% extends 'core/base.html' %}
 {% load static %}
     {% block  titulo%}
+
     <section class="page-section">
       <div class="container">
           <div class="product-item">
               <div class="product-item-title d-flex">
                   <div class="bg-faded p-5 d-flex me-auto rounded">
                       <h2 class="section-heading mb-0">
-                          <p></p>
+                          
                           <span class="section-heading-lower">CLIENTES</span>
+                          
                       </h2>
                     </div>
               </div>
@@ -20,16 +22,19 @@
     {% block contenido %}
 
     <div class="col-md-3 pb-4">
-      <div class="card mb-4" style="background-color: burlywood; color: black;">  
-          <div class="card-body align-self-md-center my-1 ">
-                  <form action="{% url 'cliente:Home' %}" method="get">
-                  <input type="text" name="consulta" placeholder="Buscar...">
-                  </form>
-             
-          </div>
+        <div class="card-body align-self-md-center my-1">
+          <form action="{% url 'cliente:Home' %}" method="get">
+            <input type="text" name="consulta" placeholder="Buscar..." style="background-color: rgb(221, 155, 68); color: rgb(255, 254, 253);
+              width: 100%; /* Full width */
+              padding: 10px; /* Padding */
+              border: 10px solid burlywood; /* Border */
+              border-radius: 50px; /* Rounded corners */
+              font-size: 20px; /* Font size */
+            ">
+          </form>
+        </div>
       </div>
     </div>
-
 
         
     <div class="row">
