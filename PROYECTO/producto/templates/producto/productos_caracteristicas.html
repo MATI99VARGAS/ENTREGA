@@ -8,24 +8,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Formulario de creación de categoria de productos</title>
+        <title>Detalle de productos</title>
         <link href="{% static 'core/css/estilos.css' %}" rel="stylesheet"/>
     </head>
 
     <body>
-        <section class="form-register">
-            <h4>FORMULARIO DE REGISTRO DE CATEGORÍAS DE PRODUCTOS</h4>
-            <form action="" method="post">
-              {% csrf_token %}
-          
-              <p>Nombre: <input class="controls" type="text" name="nombre" id="nombre" required></p>
-              <p>Descripción: <input class="controls" type="text" name="descripcion" id="descripcion" required></p>
-              
-        
-              <input class="botons" type="submit" value="REGISTRAR">
-            </form>
-            
-        </section>
+
+        <ul>
+            <li>Nombre: {{producto.nombre}}</li>
+            <li>Categoría: {{producto.categoria}}</li>
+            <li>Precio: $ {{producto.precio}}</li>
+        </ul>
 
         <a href="{% url 'core:Home' %}">
 

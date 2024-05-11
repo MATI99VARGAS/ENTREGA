@@ -37,3 +37,9 @@ def Producto_create(request):
         else:
             form = forms.Producto_CreateForm()
         return render(request,"Producto/producto_create.html",context = {"form":form})
+    
+
+def productos_caracteristicas(request,pk):
+    query = models.Producto.objects.get(id=pk)
+    return render(request,"productos_caracteristicas.html",context={"producto":query})
+

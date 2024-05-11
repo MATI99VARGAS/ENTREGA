@@ -10,16 +10,17 @@ class ProductoCategoria(models.Model):
     class Meta:
         verbose_name = "categoría de productos"
 
-class Precio(models.Model):
-    precio_unitario = models.PositiveBigIntegerField()
+class Origen(models.Model):
+    Origen_producto= models.CharField(max_length=200,unique=True)
     def __str__(self):
 
-     return self.precio_unitario
+     return self.Origen_producto
 
 class Producto(models.Model):
     nombre = models.CharField(max_length=200)
     modelo_categoria = models.ForeignKey(ProductoCategoria, on_delete=models.SET_NULL, null=True, verbose_name="categoría de productos")
-    precio_producto = models.ForeignKey(Precio, on_delete=models.SET_NULL, null=True, verbose_name="Precio")
+    precio_producto = models.PositiveBigIntegerField(verbose_name="Precio")
+    Origen_producto = models.ForeignKey(Origen, on_delete=models.SET_NULL, null=True, verbose_name="Origen del producto")
     
     def __str__(self):
 
